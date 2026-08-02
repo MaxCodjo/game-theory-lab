@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Game Theory Lab — Strategy, Played.</title>
+<meta name="description" content="Game theory made entertaining and educational. Interactive demos, stories, equations and videos for the 20 models that explain how the world really makes decisions.">
+<meta property="og:title" content="The Game Theory Lab">
+<meta property="og:description" content="Strategy, played. Interactive game theory for curious minds — with YouTube & TikTok episodes.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♟️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="brand-mark">♟</span> The Game Theory <em>Lab</em></a>
+  <nav class="nav-links">
+    <a href="#models">The Models</a>
+    <a href="#play">Play</a>
+    <a href="#flashcards">Flashcards</a>
+    <a href="#educators">Educators</a>
+    <a href="#channel">Watch</a>
+  </nav>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">≡</button>
+</header>
+
+<!-- ============ SIDE TOC ============ -->
+<aside class="toc" id="toc" aria-label="On this page">
+  <p class="toc-title">On this page</p>
+  <a href="#why" data-toc>Why game theory</a>
+  <a href="#models" data-toc>Top 10 models</a>
+  <a href="#play" data-toc>Play the games</a>
+  <a href="#flashcards" data-toc>20 flashcards</a>
+  <a href="#cheatsheet" data-toc>Cheat sheet</a>
+  <a href="#educators" data-toc>For educators</a>
+  <a href="#channel" data-toc>The channel</a>
+</aside>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-kicker">A website · a YouTube channel · a TikTok channel</p>
+    <h1>Every decision is a <span class="grad">game</span>.<br>Learn to play it.</h1>
+    <p class="hero-sub">Game theory made <strong>entertaining</strong> and <strong>educational</strong> — the 20 models that explain
+      pricing wars, penalty kicks, peace treaties and playground politics. Stories first, equations second, games you can actually play.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#play">▶ Play a game now</a>
+      <a class="btn btn-ghost" href="#models">Explore the models</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat" data-count="20">0</span><small>models explained</small></div>
+      <div><span class="stat" data-count="10">0</span><small>stories to remember them</small></div>
+      <div><span class="stat" data-count="3">0</span><small>playable demos</small></div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#why" aria-label="Scroll down">▼</a>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section" id="why">
+  <div class="wrap reveal">
+    <p class="kicker">Start here</p>
+    <h2>Game theory is the physics of <span class="grad">strategic interaction</span></h2>
+    <p class="lede">Whenever your best move depends on someone else's move — a rival's price, a negotiator's patience,
+    a goalkeeper's dive — you're inside a game. Game theory gives you the map: players, strategies, payoffs,
+    and the equilibria where everything settles.</p>
+    <div class="pillars">
+      <div class="pillar reveal"><span>🎯</span><h3>Predict</h3><p>Where will a strategic situation settle? Nash equilibrium tells you the stable points.</p></div>
+      <div class="pillar reveal"><span>🤝</span><h3>Cooperate</h3><p>Why do partnerships break down — and how do repeated interactions rescue them?</p></div>
+      <div class="pillar reveal"><span>⚔️</span><h3>Compete</h3><p>Pricing, auctions, market entry: who should move first, and when should you randomize?</p></div>
+      <div class="pillar reveal"><span>🧩</span><h3>Divide</h3><p>Coalitions and bargaining: how do rational players split a pie they built together?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODELS ============ -->
+<section class="section section-alt" id="models">
+  <div class="wrap">
+    <p class="kicker reveal">The core curriculum</p>
+    <h2 class="reveal">The Top 10 models, each in <span class="grad">3 layers</span></h2>
+    <p class="lede reveal">A story you'll remember, a diagram you can see, an equation you can use. Click a layer tab inside each card.</p>
+  </div>
+
+  <!-- 1 NASH -->
+  <article class="model wrap reveal" id="m-nash">
+    <div class="model-head"><span class="model-num">01</span>
+      <div><h3>Nash Equilibrium</h3><p class="model-tag">stable balance · no one wants to move alone</p></div>
+      <span class="model-use">Use for: general strategic prediction</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Two coffee shops open across the street from each other. Each wants a price that pulls in customers — but undercut too hard and the other retaliates. After a few rounds, both settle at a price where <em>neither can do better by changing alone</em>. That resting point is the Nash equilibrium.</p></div>
+        <div class="pane" data-pane="math"><p>A strategy profile \(s^*\) is a Nash equilibrium if no player gains by deviating unilaterally:</p>
+          <div class="eq">$$u_i(s_i^*, s_{-i}^*) \ge u_i(s_i, s_{-i}^*) \quad \forall i,\ \forall s_i$$</div>
+          <p class="eq-note">\(s_{-i}^*\) = everyone else's strategies, held fixed.</p></div>
+        <div class="pane" data-pane="use"><p>Reach for it whenever you need to predict where a strategic situation will <em>settle</em>: price wars, arms races, traffic routes, standards adoption. It's the default solution concept of modern economics.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Best response curves crossing at equilibrium">
+          <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8ea0c0"/></marker></defs>
+          <line x1="40" y1="200" x2="300" y2="200" stroke="#8ea0c0" marker-end="url(#ar)"/>
+          <line x1="40" y1="200" x2="40" y2="20" stroke="#8ea0c0" marker-end="url(#ar)"/>
+          <path d="M50,190 C110,120 200,90 290,70" fill="none" stroke="#4fd1ff" stroke-width="3"/>
+          <path d="M55,40 C110,110 190,150 285,175" fill="none" stroke="#ffb454" stroke-width="3"/>
+          <circle cx="163" cy="119" r="7" fill="#7bf1a8"><animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite"/></circle>
+          <text x="230" y="55" fill="#4fd1ff" font-size="12">BR₁(p₂)</text>
+          <text x="230" y="195" fill="#ffb454" font-size="12">BR₂(p₁)</text>
+          <text x="178" y="112" fill="#7bf1a8" font-size="12">Nash ✦</text>
+          <text x="150" y="228" fill="#8ea0c0" font-size="11">shop 1's price</text>
+          <text x="14" y="110" fill="#8ea0c0" font-size="11" transform="rotate(-90 20 110)">shop 2's price</text>
+        </svg>
+        <figcaption>Where both best-response curves cross, nobody moves: equilibrium.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 2 PD -->
+  <article class="model wrap reveal" id="m-pd">
+    <div class="model-head"><span class="model-num">02</span>
+      <div><h3>Prisoner's Dilemma</h3><p class="model-tag">temptation to defect · private incentives hurt the group</p></div>
+      <span class="model-use">Use for: cooperation problems &amp; trust</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Two farmers share a canal. If both conserve water, both harvests thrive. But each is tempted to take extra — even though that drains the other's field. Temptation wins, both overuse the canal, and both end up worse than if they'd cooperated.</p></div>
+        <div class="pane" data-pane="math"><p>Payoffs ordered \(T &gt; R &gt; P &gt; S\): defection dominates, yet \((C,C)\) beats \((D,D)\).</p>
+          <div class="eq">$$\begin{array}{c|cc} & C & D \\ \hline C & (R,R) & (S,T) \\ D & (T,S) & (P,P) \end{array}$$</div>
+          <p class="eq-note">Temptation \(T\), Reward \(R\), Punishment \(P\), Sucker \(S\).</p></div>
+        <div class="pane" data-pane="use"><p>Climate agreements, cartel cheating, doping in sport, overfishing, office free-riding. Any time individual incentives quietly sabotage the group outcome.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="2x2 payoff matrix with defect-defect highlighted">
+          <rect x="80" y="60" width="100" height="70" fill="#12305a" stroke="#4fd1ff"/>
+          <rect x="180" y="60" width="100" height="70" fill="#0e1830" stroke="#33507c"/>
+          <rect x="80" y="130" width="100" height="70" fill="#0e1830" stroke="#33507c"/>
+          <rect x="180" y="130" width="100" height="70" fill="#5a1f1f" stroke="#ff7b7b" stroke-width="2">
+            <animate attributeName="stroke-width" values="2;4;2" dur="2s" repeatCount="indefinite"/></rect>
+          <text x="130" y="50" fill="#c8d6ef" font-size="13" text-anchor="middle">Cooperate</text>
+          <text x="230" y="50" fill="#c8d6ef" font-size="13" text-anchor="middle">Defect</text>
+          <text x="70" y="100" fill="#c8d6ef" font-size="13" text-anchor="end">C</text>
+          <text x="70" y="170" fill="#c8d6ef" font-size="13" text-anchor="end">D</text>
+          <text x="130" y="100" fill="#7bf1a8" font-size="15" text-anchor="middle">3 , 3</text>
+          <text x="230" y="100" fill="#8ea0c0" font-size="15" text-anchor="middle">0 , 5</text>
+          <text x="130" y="170" fill="#8ea0c0" font-size="15" text-anchor="middle">5 , 0</text>
+          <text x="230" y="170" fill="#ff7b7b" font-size="15" text-anchor="middle">1 , 1</text>
+          <text x="230" y="188" fill="#ff7b7b" font-size="10" text-anchor="middle">the trap (Nash)</text>
+          <text x="130" y="118" fill="#7bf1a8" font-size="10" text-anchor="middle">better for both…</text>
+        </svg>
+        <figcaption>Rational play lands in the red cell — the whole tragedy in one matrix.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 3 REPEATED -->
+  <article class="model wrap reveal" id="m-repeated">
+    <div class="model-head"><span class="model-num">03</span>
+      <div><h3>Repeated Games</h3><p class="model-tag">the future disciplines the present</p></div>
+      <span class="model-use">Use for: reputation &amp; long-term deals</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Two suppliers compete for the same retailer every month. One considers cutting quality to save money — but knows the retailer will <em>remember</em>. Because they'll do business for years, both behave better than in a one-shot deal. The shadow of the future changes today.</p></div>
+        <div class="pane" data-pane="math"><p>The stage game repeats at \(t=0,1,2,\dots\); payoffs are discounted by \(\delta\):</p>
+          <div class="eq">$$U_i = (1-\delta)\sum_{t=0}^{\infty} \delta^t\, g_i(a^t), \qquad 0 \le \delta &lt; 1$$</div>
+          <p class="eq-note">Patient players (high \(\delta\)) can sustain cooperation that one-shot logic destroys.</p></div>
+        <div class="pane" data-pane="use"><p>Supplier relationships, alliances, cartels, tit-for-tat diplomacy, online seller ratings. Whenever the same players will meet again.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Discounted payoffs shrinking over rounds">
+          <line x1="30" y1="200" x2="300" y2="200" stroke="#8ea0c0"/>
+          <g fill="#4fd1ff">
+            <rect x="45"  y="80"  width="26" height="120" rx="3" opacity="1"/>
+            <rect x="85"  y="104" width="26" height="96"  rx="3" opacity=".85"/>
+            <rect x="125" y="123" width="26" height="77"  rx="3" opacity=".7"/>
+            <rect x="165" y="138" width="26" height="62"  rx="3" opacity=".55"/>
+            <rect x="205" y="151" width="26" height="49"  rx="3" opacity=".45"/>
+            <rect x="245" y="161" width="26" height="39"  rx="3" opacity=".35"/>
+          </g>
+          <text x="58" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=0</text>
+          <text x="98" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=1</text>
+          <text x="138" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=2</text>
+          <text x="178" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=3</text>
+          <text x="218" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=4</text>
+          <text x="258" y="218" fill="#8ea0c0" font-size="11" text-anchor="middle">t=5</text>
+          <text x="160" y="45" fill="#c8d6ef" font-size="13" text-anchor="middle">δᵗ · payoff — each future round still counts</text>
+        </svg>
+        <figcaption>Discounting: tomorrow matters a bit less — but it still matters enough to behave.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 4 ZERO SUM -->
+  <article class="model wrap reveal" id="m-zerosum">
+    <div class="model-head"><span class="model-num">04</span>
+      <div><h3>Zero-Sum Games</h3><p class="model-tag">one wins exactly what the other loses</p></div>
+      <span class="model-use">Use for: pure competition</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Two chess players sit down. Every advantage one gains makes the other exactly worse off. No shared profit, no win-win — only victory and defeat. The purest form of competition.</p></div>
+        <div class="pane" data-pane="math"><p>Payoffs always sum to zero:</p>
+          <div class="eq">$$u_1(s_1,s_2) + u_2(s_1,s_2) = 0 \;\;\Longleftrightarrow\;\; u_2 = -u_1$$</div>
+          <p class="eq-note">Solved by minimax: maximize your worst case, because their gain is your loss.</p></div>
+        <div class="pane" data-pane="use"><p>Sports, chess, poker heads-up, sealed-bid contests, adversarial security. If a deal could grow the pie, it's <em>not</em> zero-sum — a common real-world mistake.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Seesaw: one player's gain is the other's loss">
+          <line x1="40" y1="180" x2="280" y2="120" stroke="#c8d6ef" stroke-width="4" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" values="0 160 150; 8 160 150; 0 160 150; -8 160 150; 0 160 150" dur="6s" repeatCount="indefinite"/></line>
+          <polygon points="160,150 140,205 180,205" fill="#33507c"/>
+          <circle cx="60" cy="168" r="16" fill="#4fd1ff"><animateTransform attributeName="transform" type="rotate" values="0 160 150; 8 160 150; 0 160 150; -8 160 150; 0 160 150" dur="6s" repeatCount="indefinite"/></circle>
+          <circle cx="262" cy="118" r="16" fill="#ffb454"><animateTransform attributeName="transform" type="rotate" values="0 160 150; 8 160 150; 0 160 150; -8 160 150; 0 160 150" dur="6s" repeatCount="indefinite"/></circle>
+          <text x="160" y="50" fill="#c8d6ef" font-size="14" text-anchor="middle">+x for me  ⇄  −x for you</text>
+        </svg>
+        <figcaption>The seesaw never creates value — it only moves it.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 5 SEQUENTIAL -->
+  <article class="model wrap reveal" id="m-sequential">
+    <div class="model-head"><span class="model-num">05</span>
+      <div><h3>Sequential Games</h3><p class="model-tag">move order is strategy</p></div>
+      <span class="model-use">Use for: negotiations, entry, auctions</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>A challenger wants to enter a new market — but first watches whether the incumbent slashes prices to scare it off. The incumbent moves, the challenger reacts, and the outcome hangs on that order. Strategy isn't just <em>what</em> to do; it's <em>when</em>.</p></div>
+        <div class="pane" data-pane="math"><p>Modeled in extensive form as a game tree:</p>
+          <div class="eq">$$G = \big(N,\, H,\, P,\, \{A(h)\}_{h\in H},\, \{u_i\}_{i\in N}\big)$$</div>
+          <p class="eq-note">Histories \(H\), player function \(P\), actions \(A(h)\). Solve by backward induction: start at the leaves.</p></div>
+        <div class="pane" data-pane="use"><p>Market entry, salary negotiations, legislative bargaining, chess openings, escalation games. Anywhere commitment and timing carry weight.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Game tree with backward induction">
+          <line x1="160" y1="40" x2="80" y2="120" stroke="#8ea0c0" stroke-width="2"/>
+          <line x1="160" y1="40" x2="240" y2="120" stroke="#4fd1ff" stroke-width="3"/>
+          <line x1="80" y1="120" x2="45" y2="195" stroke="#8ea0c0" stroke-width="2"/>
+          <line x1="80" y1="120" x2="115" y2="195" stroke="#8ea0c0" stroke-width="2"/>
+          <line x1="240" y1="120" x2="205" y2="195" stroke="#8ea0c0" stroke-width="2"/>
+          <line x1="240" y1="120" x2="275" y2="195" stroke="#7bf1a8" stroke-width="3"/>
+          <circle cx="160" cy="40" r="12" fill="#ffb454"/><text x="160" y="45" font-size="11" text-anchor="middle" fill="#0b1020">L</text>
+          <circle cx="80" cy="120" r="12" fill="#4fd1ff"/><text x="80" y="125" font-size="11" text-anchor="middle" fill="#0b1020">F</text>
+          <circle cx="240" cy="120" r="12" fill="#4fd1ff"/><text x="240" y="125" font-size="11" text-anchor="middle" fill="#0b1020">F</text>
+          <g fill="#c8d6ef" font-size="11" text-anchor="middle">
+            <text x="45" y="215">(1,1)</text><text x="115" y="215">(0,3)</text>
+            <text x="205" y="215">(2,0)</text><text x="275" y="215" fill="#7bf1a8">(3,2) ✓</text>
+          </g>
+          <text x="105" y="70" fill="#8ea0c0" font-size="11">fight</text>
+          <text x="212" y="70" fill="#4fd1ff" font-size="11">accommodate</text>
+        </svg>
+        <figcaption>Backward induction: the leader reasons from the end of the tree to its first move.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 6 SIMULTANEOUS -->
+  <article class="model wrap reveal" id="m-simultaneous">
+    <div class="model-head"><span class="model-num">06</span>
+      <div><h3>Simultaneous-Move Games</h3><p class="model-tag">decide before you can see</p></div>
+      <span class="model-use">Use for: price setting, announcements</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Two rival phone makers set launch prices without seeing each other's choice. Each guesses what the other will do and commits at the same time. No reacting in the moment — decisions under pure uncertainty about the other side.</p></div>
+        <div class="pane" data-pane="math"><p>Written in normal (matrix) form:</p>
+          <div class="eq">$$G = \big(N, \{S_i\}_{i\in N}, \{u_i\}_{i\in N}\big)$$</div>
+          <p class="eq-note">Solved with the same Nash condition — best responses to beliefs about others.</p></div>
+        <div class="pane" data-pane="use"><p>Simultaneous bids, product launches, campaign announcements, standardized test-day strategies. Whenever nobody sees anybody's move first.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Two players committing simultaneously">
+          <circle cx="70" cy="120" r="30" fill="#12305a" stroke="#4fd1ff" stroke-width="2"/>
+          <circle cx="250" cy="120" r="30" fill="#3a2a10" stroke="#ffb454" stroke-width="2"/>
+          <text x="70" y="126" font-size="20" text-anchor="middle">🤔</text>
+          <text x="250" y="126" font-size="20" text-anchor="middle">🤔</text>
+          <line x1="108" y1="120" x2="150" y2="120" stroke="#4fd1ff" stroke-width="3" marker-end="url(#ar)">
+            <animate attributeName="opacity" values="0;1;1" keyTimes="0;.5;1" dur="2.5s" repeatCount="indefinite"/></line>
+          <line x1="212" y1="120" x2="170" y2="120" stroke="#ffb454" stroke-width="3" marker-end="url(#ar)">
+            <animate attributeName="opacity" values="0;1;1" keyTimes="0;.5;1" dur="2.5s" repeatCount="indefinite"/></line>
+          <rect x="152" y="104" width="16" height="32" fill="#0e1830" stroke="#8ea0c0" stroke-dasharray="4 3"/>
+          <text x="160" y="70" fill="#c8d6ef" font-size="13" text-anchor="middle">same instant, no peeking</text>
+          <text x="160" y="185" fill="#8ea0c0" font-size="12" text-anchor="middle">each best-responds to a *guess*</text>
+        </svg>
+        <figcaption>A wall between the players: commit now, find out later.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 7 MIXED -->
+  <article class="model wrap reveal" id="m-mixed">
+    <div class="model-head"><span class="model-num">07</span>
+      <div><h3>Mixed Strategies</h3><p class="model-tag">randomness as a weapon</p></div>
+      <span class="model-use">Use for: staying unpredictable</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Penalty shootout. If the kicker always shoots left, the goalie learns the pattern. So the kicker mixes left, right and center — with calibrated probabilities. Randomness stops being a weakness and becomes the strategy itself.</p></div>
+        <div class="pane" data-pane="math"><p>A mixed strategy is a probability distribution over pure strategies:</p>
+          <div class="eq">$$\sigma_i \in \Delta(S_i), \qquad \mathbb{E}[u_i(\sigma)] = \sum_{s\in S} \sigma(s)\, u_i(s)$$</div>
+          <p class="eq-note">In equilibrium you mix so the opponent is <em>indifferent</em> between their options.</p></div>
+        <div class="pane" data-pane="use"><p>Penalty kicks, poker bluffing, security patrols, tax audits, rock-paper-scissors. Real pros randomize at almost exactly the theoretical rates.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Probability bars over kick directions">
+          <g>
+            <rect x="55"  y="70"  width="56" height="110" rx="6" fill="#4fd1ff" opacity=".9"><animate attributeName="height" values="110;90;110" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="70;90;70" dur="3s" repeatCount="indefinite"/></rect>
+            <rect x="132" y="120" width="56" height="60" rx="6" fill="#7bf1a8" opacity=".9"><animate attributeName="height" values="60;85;60" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="120;95;120" dur="3s" repeatCount="indefinite"/></rect>
+            <rect x="209" y="85"  width="56" height="95" rx="6" fill="#ffb454" opacity=".9"><animate attributeName="height" values="95;100;95" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="85;80;85" dur="3s" repeatCount="indefinite"/></rect>
+          </g>
+          <line x1="40" y1="180" x2="290" y2="180" stroke="#8ea0c0"/>
+          <text x="83"  y="200" fill="#c8d6ef" font-size="12" text-anchor="middle">Left ⚽</text>
+          <text x="160" y="200" fill="#c8d6ef" font-size="12" text-anchor="middle">Center</text>
+          <text x="237" y="200" fill="#c8d6ef" font-size="12" text-anchor="middle">Right</text>
+          <text x="160" y="45" fill="#c8d6ef" font-size="13" text-anchor="middle">σ = (0.42, 0.20, 0.38) — keep them guessing</text>
+        </svg>
+        <figcaption>Your strategy is the whole distribution, not any single kick.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 8 COOPERATIVE -->
+  <article class="model wrap reveal" id="m-cooperative">
+    <div class="model-head"><span class="model-num">08</span>
+      <div><h3>Cooperative Game Theory</h3><p class="model-tag">join forces, then split fairly</p></div>
+      <span class="model-use">Use for: coalitions &amp; joint ventures</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>Three construction firms bid on a mega-project none can finish alone. As a coalition they combine cranes, crews and know-how — then face the harder question: how to split the gains so nobody walks. Winning is easy; <em>sharing</em> is the game.</p></div>
+        <div class="pane" data-pane="math"><p>A coalition game assigns value to every group:</p>
+          <div class="eq">$$(N, v), \quad v: 2^N \to \mathbb{R}$$</div>
+          <p>The <strong>core</strong> keeps every coalition on board:</p>
+          <div class="eq">$$\sum_{i\in N} x_i = v(N), \qquad \sum_{i\in S} x_i \ge v(S)\ \ \forall S \subseteq N$$</div></div>
+        <div class="pane" data-pane="use"><p>Joint ventures, cost-sharing (airports, pipelines), political coalitions, profit splits. Also the home of the Shapley value — the "fair share by contribution" formula.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Three overlapping coalition circles">
+          <circle cx="130" cy="100" r="55" fill="#4fd1ff" opacity=".35"/>
+          <circle cx="190" cy="100" r="55" fill="#ffb454" opacity=".35"/>
+          <circle cx="160" cy="150" r="55" fill="#7bf1a8" opacity=".35"/>
+          <text x="105" y="80" fill="#c8d6ef" font-size="13">A</text>
+          <text x="212" y="80" fill="#c8d6ef" font-size="13">B</text>
+          <text x="158" y="192" fill="#c8d6ef" font-size="13">C</text>
+          <text x="160" y="122" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">v(ABC)</text>
+          <text x="160" y="228" fill="#8ea0c0" font-size="12" text-anchor="middle">together they create value none has alone</text>
+        </svg>
+        <figcaption>The grand coalition creates the surplus; the core decides who keeps what.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 9 BARGAINING -->
+  <article class="model wrap reveal" id="m-bargaining">
+    <div class="model-head"><span class="model-num">09</span>
+      <div><h3>Bargaining Models</h3><p class="model-tag">patience and outside options set the price</p></div>
+      <span class="model-use">Use for: negotiation &amp; deal-making</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>A buyer and seller haggle over a house. Seller starts high, buyer counters low, both drift toward the middle — but the final number depends less on "value" than on who can wait longer and who has better alternatives. Patience is leverage.</p></div>
+        <div class="pane" data-pane="math"><p>The Nash bargaining solution maximizes the product of gains over each side's fallback \(d\):</p>
+          <div class="eq">$$\max_{(u_1,u_2)\in F} (u_1 - d_1)(u_2 - d_2)$$</div>
+          <p class="eq-note">Better outside option \(d_i\) ⇒ bigger share. Improve your BATNA, win the deal.</p></div>
+        <div class="pane" data-pane="use"><p>Salary talks, M&amp;A, trade deals, divorce settlements, hostage negotiations. The formula behind "never negotiate without an alternative."</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Surplus split between two parties">
+          <rect x="40" y="100" width="240" height="40" rx="8" fill="#0e1830" stroke="#33507c"/>
+          <rect x="40" y="100" width="150" height="40" rx="8" fill="#4fd1ff" opacity=".8">
+            <animate attributeName="width" values="150;120;170;150" dur="6s" repeatCount="indefinite"/></rect>
+          <text x="100" y="126" fill="#0b1020" font-size="13" font-weight="bold">buyer's gain</text>
+          <text x="235" y="126" fill="#c8d6ef" font-size="13">seller's gain</text>
+          <line x1="40" y1="90" x2="40" y2="150" stroke="#ff7b7b" stroke-width="2"/>
+          <line x1="280" y1="90" x2="280" y2="150" stroke="#ff7b7b" stroke-width="2"/>
+          <text x="40" y="80" fill="#ff7b7b" font-size="11" text-anchor="middle">d₁ walk-away</text>
+          <text x="280" y="80" fill="#ff7b7b" font-size="11" text-anchor="middle">d₂ walk-away</text>
+          <text x="160" y="185" fill="#8ea0c0" font-size="12" text-anchor="middle">the split line moves with patience &amp; alternatives</text>
+        </svg>
+        <figcaption>One surplus bar, one moving frontier: that's every negotiation.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 10 STACKELBERG -->
+  <article class="model wrap reveal" id="m-stackelberg">
+    <div class="model-head"><span class="model-num">10</span>
+      <div><h3>Stackelberg Competition</h3><p class="model-tag">the leader shapes the battlefield</p></div>
+      <span class="model-use">Use for: leader–follower markets</span>
+    </div>
+    <div class="model-body">
+      <div class="model-text">
+        <div class="tabs" data-tabs>
+          <button class="tab active" data-tab="story">📖 Story</button>
+          <button class="tab" data-tab="math">∑ Math</button>
+          <button class="tab" data-tab="use">🛠 When to use</button>
+        </div>
+        <div class="pane active" data-pane="story"><p>A supermarket giant announces a milk price cut. Smaller stores watch, then set their own prices in response. Because the giant moved first — publicly and credibly — the followers react to <em>its</em> choice instead of choosing freely. The leader wrote the rules of the round.</p></div>
+        <div class="pane" data-pane="math"><p>The follower best-responds; the leader optimizes <em>anticipating</em> that response:</p>
+          <div class="eq">$$q_F^*(q_L) = \arg\max_{q_F} \pi_F(q_L, q_F)$$</div>
+          <div class="eq">$$q_L^* = \arg\max_{q_L} \pi_L\big(q_L,\, q_F^*(q_L)\big)$$</div></div>
+        <div class="pane" data-pane="use"><p>Platform pricing, supply chains, OPEC-style output leadership, first-mover product launches. First-mover advantage, formalized.</p></div>
+      </div>
+      <figure class="model-fig">
+        <svg viewBox="0 0 320 240" role="img" aria-label="Leader commits, follower reacts along a curve">
+          <line x1="40" y1="200" x2="300" y2="200" stroke="#8ea0c0" marker-end="url(#ar)"/>
+          <line x1="40" y1="200" x2="40" y2="30" stroke="#8ea0c0" marker-end="url(#ar)"/>
+          <path d="M55,60 C130,95 220,140 290,170" fill="none" stroke="#ffb454" stroke-width="3"/>
+          <text x="200" y="120" fill="#ffb454" font-size="12">follower's reaction</text>
+          <line x1="150" y1="200" x2="150" y2="112" stroke="#4fd1ff" stroke-width="2" stroke-dasharray="5 4"/>
+          <circle cx="150" cy="112" r="7" fill="#4fd1ff"><animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite"/></circle>
+          <text x="150" y="222" fill="#4fd1ff" font-size="12" text-anchor="middle">leader commits qL</text>
+          <text x="160" y="100" fill="#c8d6ef" font-size="11">outcome ✦</text>
+        </svg>
+        <figcaption>Commit first, and the follower's whole curve becomes your menu.</figcaption>
+      </figure>
+    </div>
+  </article>
+</section>
+
+<!-- ============ PLAY ============ -->
+<section class="section" id="play">
+  <div class="wrap">
+    <p class="kicker reveal">Don't just read it</p>
+    <h2 class="reveal">Play the <span class="grad">games</span></h2>
+    <p class="lede reveal">Three interactive labs. Each one teaches a model by letting you lose to it first.</p>
+
+    <!-- PD GAME -->
+    <div class="game reveal" id="game-pd">
+      <div class="game-head"><h3>🥷 Lab 1 · Iterated Prisoner's Dilemma</h3>
+        <p>You vs. <strong>Tit-for-Tat</strong>: it cooperates first, then copies your last move. Can you beat the classic tournament champion?</p></div>
+      <div class="game-ui">
+        <div class="game-controls">
+          <button class="btn btn-coop" id="pdCoop">🤝 Cooperate</button>
+          <button class="btn btn-defect" id="pdDefect">🗡 Defect</button>
+          <button class="btn btn-ghost btn-sm" id="pdReset">↺ Reset</button>
+        </div>
+        <div class="scoreboard">
+          <div><small>You</small><span id="pdYou">0</span></div>
+          <div><small>Tit-for-Tat</small><span id="pdBot">0</span></div>
+          <div><small>Round</small><span id="pdRound">0</span></div>
+        </div>
+      </div>
+      <div class="history" id="pdHistory" aria-live="polite"></div>
+      <p class="game-lesson" id="pdLesson">Payoffs per round — both cooperate: 3/3 · both defect: 1/1 · lone defector: 5, sucker: 0.</p>
+    </div>
+
+    <!-- PENALTY GAME -->
+    <div class="game reveal" id="game-pk">
+      <div class="game-head"><h3>⚽ Lab 2 · Penalty Kick (Mixed Strategies)</h3>
+        <p>Pick a corner. The goalie <strong>studies your habits</strong> — the more predictable you are, the more saves it makes. Beat it by truly mixing.</p></div>
+      <div class="pitch">
+        <div class="goal">
+          <div class="keeper" id="pkKeeper">🧤</div>
+          <div class="ball" id="pkBall">⚽</div>
+        </div>
+        <div class="game-controls">
+          <button class="btn btn-primary" data-kick="0">◀ Left</button>
+          <button class="btn btn-primary" data-kick="1">▲ Center</button>
+          <button class="btn btn-primary" data-kick="2">Right ▶</button>
+          <button class="btn btn-ghost btn-sm" id="pkReset">↺ Reset</button>
+        </div>
+      </div>
+      <div class="scoreboard">
+        <div><small>Goals</small><span id="pkGoals">0</span></div>
+        <div><small>Saves</small><span id="pkSaves">0</span></div>
+        <div><small>Your mix L/C/R</small><span id="pkMix">–</span></div>
+      </div>
+      <p class="game-lesson" id="pkLesson">Optimal play ≈ randomize close to your best equilibrium frequencies. Patterns get punished.</p>
+    </div>
+
+    <!-- NASH PRICING GAME -->
+    <div class="game reveal" id="game-nash">
+      <div class="game-head"><h3>☕ Lab 3 · Coffee War (Nash Equilibrium)</h3>
+        <p>Set your latte price. Your rival <strong>best-responds instantly</strong>. Slide until neither of you wants to move — you'll feel the equilibrium click.</p></div>
+      <div class="nash-ui">
+        <label for="nashPrice">Your price: <strong id="nashPriceLabel">$5.00</strong></label>
+        <input type="range" id="nashPrice" min="1" max="9" step="0.1" value="5">
+        <div class="scoreboard">
+          <div><small>Rival's best response</small><span id="nashRival">–</span></div>
+          <div><small>Your profit</small><span id="nashProfitYou">–</span></div>
+          <div><small>Rival profit</small><span id="nashProfitRival">–</span></div>
+        </div>
+        <div class="nash-hint" id="nashHint"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLASHCARDS ============ -->
+<section class="section section-alt" id="flashcards">
+  <div class="wrap">
+    <p class="kicker reveal">Memorize the map</p>
+    <h2 class="reveal">All 20 models as <span class="grad">flashcards</span></h2>
+    <p class="lede reveal">Click any card to flip it. Front: the model. Back: the one-line intuition and its equation.</p>
+    <div class="cards" id="cardGrid"><!-- built by app.js --></div>
+  </div>
+</section>
+
+<!-- ============ CHEAT SHEET ============ -->
+<section class="section" id="cheatsheet">
+  <div class="wrap reveal">
+    <p class="kicker">One screen to rule them all</p>
+    <h2>The <span class="grad">cheat sheet</span></h2>
+    <div class="table-scroll">
+      <table class="cheat">
+        <thead><tr><th>Situation you're facing</th><th>Model to reach for</th><th>Memory hook</th></tr></thead>
+        <tbody>
+          <tr><td>General strategic prediction</td><td>Nash equilibrium</td><td>stable balance</td></tr>
+          <tr><td>Cooperation keeps collapsing</td><td>Prisoner's Dilemma</td><td>temptation to defect</td></tr>
+          <tr><td>Same players, again and again</td><td>Repeated games</td><td>the future disciplines the present</td></tr>
+          <tr><td>Pure win/lose competition</td><td>Zero-sum</td><td>one wins, one loses</td></tr>
+          <tr><td>Moves happen in order</td><td>Sequential games</td><td>order matters</td></tr>
+          <tr><td>Everyone commits blind</td><td>Simultaneous games</td><td>decide without seeing</td></tr>
+          <tr><td>Predictability gets punished</td><td>Mixed strategies</td><td>randomness is strategic</td></tr>
+          <tr><td>Alliances &amp; shared gains</td><td>Cooperative games</td><td>join forces, split fairly</td></tr>
+          <tr><td>Splitting a surplus</td><td>Bargaining models</td><td>patience is leverage</td></tr>
+          <tr><td>One firm sets the tone</td><td>Stackelberg</td><td>leader moves first</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATORS ============ -->
+<section class="section section-alt" id="educators">
+  <div class="wrap">
+    <p class="kicker reveal">Inspired by gametheory.net</p>
+    <h2 class="reveal">For <span class="grad">educators</span> &amp; self-learners</h2>
+    <p class="lede reveal">Classroom-ready material: a reading order, a pop-quiz, and pop-culture hooks that make lectures land.</p>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <h3>📚 Suggested reading order</h3>
+        <ol>
+          <li>Nash equilibrium</li><li>Prisoner's Dilemma</li><li>Repeated games</li>
+          <li>Zero-sum games</li><li>Sequential games</li><li>Bargaining</li>
+          <li>Stackelberg</li><li>Cournot</li><li>Bertrand</li><li>Bayesian games</li>
+        </ol>
+      </div>
+      <div class="edu-card reveal">
+        <h3>🍿 Pop-culture hooks</h3>
+        <ul>
+          <li><strong>A Beautiful Mind</strong> — the bar scene (imperfectly!) dramatizes Nash's idea.</li>
+          <li><strong>The Dark Knight</strong> — the two-ferries scene is a Prisoner's Dilemma.</li>
+          <li><strong>Golden Balls "Split or Steal"</strong> — a PD played on live TV.</li>
+          <li><strong>The Princess Bride</strong> — the poisoned-cup duel is level-k reasoning.</li>
+          <li><strong>Penalty shootouts</strong> — pro kickers mix at near-equilibrium rates.</li>
+        </ul>
+      </div>
+      <div class="edu-card reveal quiz" id="quizBox">
+        <h3>📝 Pop quiz</h3>
+        <div id="quizBody"><!-- built by app.js --></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHANNEL ============ -->
+<section class="section" id="channel">
+  <div class="wrap">
+    <p class="kicker reveal">Watch &amp; follow</p>
+    <h2 class="reveal">The <span class="grad">channel</span></h2>
+    <p class="lede reveal">Every model above becomes an episode: a 60-second TikTok hook and a deep-dive YouTube video. Season 1 roadmap:</p>
+    <div class="episodes">
+      <div class="ep reveal"><span class="ep-num">EP 1</span><h4>The $5 Trap</h4><p>Why two coffee shops always end up at the same price — Nash equilibrium in the wild.</p><span class="ep-badge">Nash</span></div>
+      <div class="ep reveal"><span class="ep-num">EP 2</span><h4>Betray Your Best Friend?</h4><p>We run the Prisoner's Dilemma on strangers in the street — with real money.</p><span class="ep-badge">PD</span></div>
+      <div class="ep reveal"><span class="ep-num">EP 3</span><h4>The Revenge Algorithm</h4><p>How Tit-for-Tat won the most famous tournament in game theory history.</p><span class="ep-badge">Repeated</span></div>
+      <div class="ep reveal"><span class="ep-num">EP 4</span><h4>Why Messi Kicks Left</h4><p>Penalty data vs. mixed-strategy theory. The math says: stay random.</p><span class="ep-badge">Mixed</span></div>
+      <div class="ep reveal"><span class="ep-num">EP 5</span><h4>Never Split the Difference?</h4><p>The Nash bargaining solution vs. real-estate haggling.</p><span class="ep-badge">Bargaining</span></div>
+      <div class="ep reveal"><span class="ep-num">EP 6</span><h4>Move First, Win More</h4><p>Stackelberg leadership: when announcing your move is the move.</p><span class="ep-badge">Stackelberg</span></div>
+    </div>
+    <div class="socials reveal">
+      <a class="btn btn-yt" href="https://www.youtube.com/" target="_blank" rel="noopener">▶ YouTube — deep dives</a>
+      <a class="btn btn-tt" href="https://www.tiktok.com/" target="_blank" rel="noopener">♪ TikTok — 60-second games</a>
+    </div>
+    <p class="note reveal">Channel links are placeholders — swap in your handles when the channels go live.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><span class="brand-mark">♟</span> <strong>The Game Theory Lab</strong> — strategy, played.</p>
+    <p class="footer-small">Content adapted from a research brief on the top game-theory frameworks (Nash, PD, repeated, zero-sum, sequential, simultaneous, mixed, cooperative, bargaining, Stackelberg, Cournot, Bertrand, auctions, signaling, screening, evolutionary, Bayesian, imperfect information, coordination, public goods). Structure inspired by gametheory.net's educator resources. Built with vanilla HTML/CSS/JS.</p>
+  </div>
+</footer>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
