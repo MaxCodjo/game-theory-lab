@@ -2,7 +2,7 @@
 
 **Strategy, played.** A dynamic, interactive website about game theory — the companion site for a YouTube + TikTok channel that makes game theory entertaining and educational.
 
-**Live site:** https://maxcodjo.github.io/game-theory-lab/
+**Live site:** https://www.greatstrata.com/
 
 ## What's inside
 
