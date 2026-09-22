@@ -1,6 +1,6 @@
-# ♟ The Game Theory Lab
+# ♟ The Strategic Mind
 
-**Strategy, played.** A dynamic, interactive website about game theory — the companion site for a YouTube + TikTok channel that makes game theory entertaining and educational.
+**Where game theory meets psychology.** A dynamic, interactive website about game theory and the psychology of decision-making — the companion site for a YouTube + TikTok channel that makes strategy entertaining and educational.
 
 **Live site:** https://www.greatstrata.com/
 
