@@ -10,7 +10,7 @@
 - **3 playable labs** — iterated Prisoner's Dilemma vs. Tit-for-Tat, a penalty-kick game with an *adaptive* goalie that punishes predictable play (mixed strategies), and a coffee-price war where you can feel the Nash equilibrium click.
 - **20 flip flashcards** — all 20 frameworks with intuition + equation on the back.
 - **Cheat sheet** — situation → model → memory hook.
-- **Educators section** — reading order, pop-culture hooks, and an interactive pop quiz (inspired by gametheory.net's educator resources).
+- **Educators section** — reading order, pop-culture hooks, and an interactive pop quiz.
 - **Channel roadmap** — Season 1 episode plan for the YouTube/TikTok channel.
 
 ## Stack
